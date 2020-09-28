@@ -58,17 +58,22 @@ myQuestions.map((question) => {
 
 function showMyResults(){
     let correctCount = 0;
-    let userAnswer = button.addEventListener('click');
+    let userAnswer = button.addEventListener('click', myQuestions);
 myQuestions.map((question) =>{
     if (userAnswer === question.correctAns) {
         correctCount++;
 
 
+    } else {
+        correctCount--;
     }
 
 
 })
 }
+
+buildMyQuiz();
+
 submitButton.addEventListener('click', showMyResults);
 
 
